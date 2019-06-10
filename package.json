@@ -1,0 +1,23 @@
+{
+  "name": "api",
+  "version": "0.0.1",
+  "description": "API Skeleton",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pantakan Chusri-eam",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "mariadb": "^2.0.5",
+    "mysql2": "^1.6.5",
+    "pg": "^7.11.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.8.7",
+    "sqlite3": "^4.0.8",
+    "tedious": "^6.1.2"
+  }
+}
