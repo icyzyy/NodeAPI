@@ -10,9 +10,9 @@ router.all('/:api/:version/:controller', function(req, res) {
 	
 	try {
 		var controller = require(`../controllers/${req.params.version}/${req.params.controller}Controller.js`);
-		res.send(controller.actionIndex(req, res));
+		res.send(controller.run(req, res));
 	} catch (err) {
-		res.send(err);
+		res.send(500);
 	}
 
 	maincontroller.afterAction;
