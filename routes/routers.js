@@ -6,13 +6,13 @@ router.all('/:api/:version/:controller', function(req, res) {
 
 	maincontroller.beforeAction;
 
-	if (req.params.api != process.env.API_NAME) res.send(404);
+	if (req.params.api != process.env.API_NAME) res.status(404).end();
 	
 	try {
 		var controller = require(`../controllers/${req.params.version}/${req.params.controller}Controller.js`);
 		res.send(controller.run(req, res));
 	} catch (err) {
-		res.send(500);
+		res.send(err);
 	}
 
 	maincontroller.afterAction;
